@@ -1,11 +1,12 @@
-import Pages.CheckBoxDemoPage;
-import Pages.Common;
-import Pages.HomePage;
-import Pages.SimpleFormDemoPage;
+package Dust;
+
+import Pages.Dust.Common;
+import Pages.Dust.HomePage;
+import Pages.Dust.SimpleFormDemoPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TC_VerifyCheckBoxDemo {
+public class TC_VerifySimpleFormDemo {
 
     public static void main(String[] args) {
 
@@ -16,18 +17,16 @@ public class TC_VerifyCheckBoxDemo {
 
         HomePage home=new HomePage(driver);
         Common common=new Common(driver);
-        CheckBoxDemoPage checkboxdemopage = new CheckBoxDemoPage(driver);
+        SimpleFormDemoPage simpleForm=new SimpleFormDemoPage(driver);
 
         home.closeStartPopup();
         home.verifyMainMenu();
         home.clickSideMainMenuLink("Input Forms");
-        home.clickSideSubMenuLink("Checkbox Demo");
-        checkboxdemopage.VerifySingleCheckBoxPage();
-        checkboxdemopage.verifySingleCheckBox();
-        checkboxdemopage.verifyCheckAll();
-        checkboxdemopage.verifyUnCheckAll();
+        home.clickSideSubMenuLink("Simple Form Demo");
+        simpleForm.verifySingleInputField();
+        simpleForm.checkSingleInputField("Testing");
+        simpleForm.checkTwoInputFields(3,8);
         common.closeBrowser();
-
 
 
 

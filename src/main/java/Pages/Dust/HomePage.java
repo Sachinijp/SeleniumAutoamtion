@@ -1,4 +1,4 @@
-package Pages;
+package Pages.Dust;
 
 
 import org.openqa.selenium.By;
