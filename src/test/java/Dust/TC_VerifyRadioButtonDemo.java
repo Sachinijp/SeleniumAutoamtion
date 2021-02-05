@@ -1,5 +1,6 @@
 package Dust;
 
+import Pages.Dust.Common;
 import Pages.Dust.HomePage;
 import Pages.Dust.RadioButtonDemo;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +17,8 @@ public class TC_VerifyRadioButtonDemo {
 
         RadioButtonDemo radio=new RadioButtonDemo(driver);
         HomePage home=new HomePage(driver);
+        Common common=new Common(driver);
+
 
 
         home.closeStartPopup();
@@ -24,5 +27,6 @@ public class TC_VerifyRadioButtonDemo {
         home.clickSideSubMenuLink("Radio Buttons Demo");
         radio.VerifySingleRadioButtonDemo();
         radio.verifySingleRadioButtonFunctionality("Male");
+        common.closeBrowser();
     }
 }

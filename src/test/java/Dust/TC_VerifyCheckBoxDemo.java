@@ -28,6 +28,7 @@ public class TC_VerifyCheckBoxDemo {
         checkboxdemopage.verifyCheckAll();
         checkboxdemopage.verifyUnCheckAll();
         common.closeBrowser();
+        common.closeBrowser();
 
 
 
